@@ -78,3 +78,9 @@ vim.o.pumheight = 10
 vim.o.showtabline = 2
 -- 使用增强状态栏插件后不再需要 vim 的模式提示
 vim.o.showmode = false
+
+-- nvim-tree
+-- disable netrw at the very start of your init.lua
+-- https://github.com/nvim-tree/nvim-tree.lua
+vim.g.loaded_netrw = 1
+vim.g.loaded_netrwPlugin = 1
