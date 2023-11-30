@@ -31,5 +31,7 @@ require("lazy").setup({
         config = function()
             require("nvim-tree").setup {}
         end,
-    }
+    },
+    -- https://github.com/akinsho/bufferline.nvim
+    { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' }
 })
