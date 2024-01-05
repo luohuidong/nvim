@@ -33,5 +33,30 @@ require("lazy").setup({
         end,
     },
     -- https://github.com/akinsho/bufferline.nvim
-    { 'akinsho/bufferline.nvim', version = "*", dependencies = 'nvim-tree/nvim-web-devicons' }
+    {
+        'akinsho/bufferline.nvim',
+        version = "*",
+        dependencies = 'nvim-tree/nvim-web-devicons'
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        config = function()
+            local configs = require("nvim-treesitter.configs")
+
+            configs.setup({
+                ensure_installed = {
+                    "vim",
+                    "lua",
+                    "html",
+                    "css",
+                    "javascript",
+                    "typescript",
+                    "tsx",
+                    "json"
+                },
+                highlight = { enable = true },
+            })
+        end
+    }
 })
