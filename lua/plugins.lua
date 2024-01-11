@@ -53,10 +53,18 @@ require("lazy").setup({
                     "javascript",
                     "typescript",
                     "tsx",
-                    "json"
+                    "json",
+                    "vue"
                 },
                 highlight = { enable = true },
+                sync_install = false,
             })
         end
+    },
+    {
+        "neovim/nvim-lspconfig"
+    },
+    {
+        "williamboman/mason.nvim"
     }
 })
