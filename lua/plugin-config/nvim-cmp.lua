@@ -65,3 +65,6 @@ local capabilities = require('cmp_nvim_lsp').default_capabilities()
 require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
     capabilities = capabilities
 }
+require('lspconfig')['volar'].setup {
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+}
