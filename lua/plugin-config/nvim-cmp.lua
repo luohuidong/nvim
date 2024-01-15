@@ -1,4 +1,5 @@
 local cmp = require 'cmp'
+local lspconfig = require 'lspconfig'
 
 cmp.setup({
     snippet = {
@@ -23,7 +24,7 @@ cmp.setup({
     }),
     sources = cmp.config.sources({
         { name = 'nvim_lsp' },
-        { name = 'vsnip' }, -- For vsnip users.
+        { name = 'vsnip' },   -- For vsnip users.
         { name = 'luasnip' }, -- For luasnip users.
         -- { name = 'ultisnips' }, -- For ultisnips users.
         -- { name = 'snippy' }, -- For snippy users.
@@ -62,9 +63,49 @@ cmp.setup.cmdline(':', {
 -- Set up lspconfig.
 local capabilities = require('cmp_nvim_lsp').default_capabilities()
 -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-require('lspconfig')['<YOUR_LSP_SERVER>'].setup {
+lspconfig.volar.setup {
+    capabilities = capabilities,
+    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+}
+lspconfig.html.setup {
     capabilities = capabilities
 }
-require('lspconfig')['volar'].setup {
-    filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
+lspconfig.cssls.setup {
+    capabilities = capabilities
+}
+lspconfig.tailwindcss.setup {
+    capabilities = capabilities
+}
+lspconfig.tsserver.setup {
+    capabilities = capabilities
+}
+lspconfig.graphql.setup {
+    capabilities = capabilities
+}
+lspconfig.astro.setup {
+    capabilities = capabilities
+}
+lspconfig.prismals.setup {
+    capabilities = capabilities
+}
+lspconfig.svelte.setup {
+    capabilities = capabilities
+}
+lspconfig.eslint.setup {
+    capabilities = capabilities
+}
+lspconfig.jsonls.setup {
+    capabilities = capabilities
+}
+lspconfig.dockerls.setup {
+    capabilities = capabilities
+}
+lspconfig.lua_ls.setup {
+    capabilities = capabilities
+}
+lspconfig.gopls.setup {
+    capabilities = capabilities
+}
+lspconfig.marksman.setup {
+    capabilities = capabilities
 }
