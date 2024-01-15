@@ -15,6 +15,9 @@ require("nvim-tree").setup({
     filters = {
         dotfiles = true,
     },
+    update_focused_file = {
+        enable = true,
+    },
 })
 
 local status_ok, _ = pcall(vim.cmd, "NvimTreeOpen")
