@@ -2,6 +2,7 @@ local telescope = require("plugins.telescope")
 local cmp = require("plugins.cmp")
 local lsp = require("plugins.lsp")
 local trouble = require("plugins.trouble")
+local barbecue = require('plugins.barbecue')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -77,7 +78,8 @@ require("lazy").setup({
     telescope,
     lsp,
     cmp,
-    trouble 
+    trouble,
+    barbecue
 })
 
 require('plugins.configs')
