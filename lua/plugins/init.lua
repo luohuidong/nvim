@@ -1,9 +1,14 @@
-local telescope = require("plugins.telescope")
-local cmp = require("plugins.cmp")
-local lsp = require("plugins.lsp")
-local trouble = require("plugins.trouble")
 local barbecue = require('plugins.barbecue')
+local bufferline = require('plugins.bufferline')
 local lualine = require('plugins.lualine')
+local nvim_cmp = require("plugins.nvim-cmp")
+local nvim_lspconfig = require("plugins.nvim-lspconfig")
+local nvim_tree = require('plugins.nvim-tree')
+local telescope = require("plugins.telescope")
+local tokyonight = require("plugins.tokyonight")
+local treesitter = require("plugins.treesitter")
+local trouble = require("plugins.trouble")
+local web_devicon = require("plugins.web-devicons")
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -23,65 +28,17 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require("lazy").setup({
     -- the colorscheme should be available when starting Neovim
-    {
-        "folke/tokyonight.nvim",
-        lazy = false,    -- make sure we load this during startup if it is your main colorscheme
-        priority = 1000, -- make sure to load this before all the other start plugins
-        config = function()
-            -- load the colorscheme here
-            vim.cmd('colorscheme tokyonight-night')
-        end,
-    },
-    {
-        "nvim-tree/nvim-tree.lua",
-        version = "*",
-        lazy = false,
-        dependencies = {
-            "nvim-tree/nvim-web-devicons",
-        },
-        config = function()
-            require("nvim-tree").setup {}
-        end,
-    },
-    -- https://github.com/akinsho/bufferline.nvim
-    {
-        'akinsho/bufferline.nvim',
-        version = "*",
-        dependencies = 'nvim-tree/nvim-web-devicons'
-    },
-    {
-        "nvim-treesitter/nvim-treesitter",
-        build = ":TSUpdate",
-        config = function()
-            local configs = require("nvim-treesitter.configs")
-
-            configs.setup({
-                ensure_installed = {
-                    "vim",
-                    "lua",
-                    "html",
-                    "css",
-                    "javascript",
-                    "typescript",
-                    "tsx",
-                    "json",
-                    "vue"
-                },
-                highlight = { enable = true },
-                sync_install = false,
-            })
-        end
-    },
-
-
+    tokyonight,
+    web_devicon,
+    treesitter,
     { "hrsh7th/cmp-vsnip" },
     { "hrsh7th/vim-vsnip" },
     telescope,
-    lsp,
-    cmp,
+    nvim_lspconfig,
+    nvim_cmp,
     trouble,
     barbecue,
-    lualine
+    lualine,
+    nvim_tree,
+    bufferline
 })
-
-require('plugins.configs')
