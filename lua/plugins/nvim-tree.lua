@@ -1,3 +1,4 @@
+-- https://github.com/nvim-tree/nvim-tree.lua
 return {
     "nvim-tree/nvim-tree.lua",
     version = "*",
@@ -15,23 +16,16 @@ return {
                 sorter = "case_sensitive",
             },
             view = {
-                width = 30,
+                width = 40,
             },
             renderer = {
                 group_empty = true,
-            },
-            filters = {
-                dotfiles = true,
             },
             update_focused_file = {
                 enable = true,
             },
         })
 
-        local status_ok, _ = pcall(vim.cmd, "NvimTreeOpen")
-        if not status_ok then
-            vim.notify("NvimTreeOpen fail!")
-            return
-        end
+        vim.cmd([[NvimTreeOpen]])
     end,
 }
