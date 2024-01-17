@@ -1,3 +1,5 @@
+local lsp_init = require('lsp')
+
 return {
     "hrsh7th/nvim-cmp",
     dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline" },
@@ -64,6 +66,11 @@ return {
             })
         })
 
+        for _, lsp_init_func in lsp_init
+        do
+            lsp_init_func()
+        end
+
         -- Set up lspconfig.
         local capabilities = require('cmp_nvim_lsp').default_capabilities()
         -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
@@ -102,9 +109,6 @@ return {
             capabilities = capabilities
         }
         lspconfig.dockerls.setup {
-            capabilities = capabilities
-        }
-        lspconfig.lua_ls.setup {
             capabilities = capabilities
         }
         lspconfig.gopls.setup {
