@@ -1,3 +1,7 @@
+local telescope = require("plugins.telescope")
+local cmp = require("plugins.cmp")
+local lsp = require("plugins.lsp")
+
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -22,7 +26,7 @@ require("lazy").setup({
         priority = 1000, -- make sure to load this before all the other start plugins
         config = function()
             -- load the colorscheme here
-            vim.cmd([[colorscheme tokyonight]])
+            vim.cmd('colorscheme tokyonight-night')
         end,
     },
     {
@@ -65,18 +69,13 @@ require("lazy").setup({
             })
         end
     },
-    { "williamboman/mason.nvim" },
-    { "williamboman/mason-lspconfig.nvim" },
-    { "neovim/nvim-lspconfig" },
-    {
-        "hrsh7th/nvim-cmp",
-        dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline" }
-    },
+
+
     { "hrsh7th/cmp-vsnip" },
     { "hrsh7th/vim-vsnip" },
-    {
-        'nvim-telescope/telescope.nvim',
-        tag = '0.1.5',
-        dependencies = { 'nvim-lua/plenary.nvim', 'nvim-telescope/telescope-fzf-native.nvim' }
-    }
+    telescope,
+    lsp,
+    cmp,
 })
+
+require('plugins.configs')
