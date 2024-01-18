@@ -66,7 +66,7 @@ return {
             })
         })
 
-        for _, lsp_init_func in lsp_init
+        for _, lsp_init_func in ipairs(lsp_init)
         do
             lsp_init_func()
         end
