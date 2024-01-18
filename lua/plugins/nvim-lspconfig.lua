@@ -1,3 +1,7 @@
+-- https://github.com/neovim/nvim-lspconfig
+
+local nvm_lspconfig_keybinding = require('lua.keybindings.nvim-lspconfig')
+
 return {
     "neovim/nvim-lspconfig",
     dependencies = { "williamboman/mason.nvim", "williamboman/mason-lspconfig.nvim" },
@@ -15,5 +19,7 @@ return {
                 "marksman",
             }
         }
+
+        nvm_lspconfig_keybinding()
     end
 }
