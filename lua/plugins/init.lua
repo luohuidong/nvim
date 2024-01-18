@@ -32,8 +32,6 @@ require("lazy").setup({
     tokyonight,
     web_devicon,
     treesitter,
-    { "hrsh7th/cmp-vsnip" },
-    { "hrsh7th/vim-vsnip" },
     telescope,
     nvim_lspconfig,
     nvim_cmp,
@@ -42,5 +40,5 @@ require("lazy").setup({
     lualine,
     nvim_tree,
     bufferline,
-    dashboard_nvim
+    dashboard_nvim,
 })

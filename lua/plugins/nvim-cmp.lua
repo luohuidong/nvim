@@ -2,10 +2,13 @@ local lsp_init = require('lsp')
 
 return {
     "hrsh7th/nvim-cmp",
-    dependencies = { "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline" },
+    dependencies = {
+        "hrsh7th/cmp-nvim-lsp", "hrsh7th/cmp-buffer", "hrsh7th/cmp-path", "hrsh7th/cmp-cmdline",
+        "hrsh7th/cmp-vsnip", "hrsh7th/vim-vsnip"
+    },
     config = function()
+        -- Set up nvim-cmp.
         local cmp = require 'cmp'
-        local lspconfig = require 'lspconfig'
 
         cmp.setup({
             snippet = {
@@ -30,8 +33,8 @@ return {
             }),
             sources = cmp.config.sources({
                 { name = 'nvim_lsp' },
-                { name = 'vsnip' },   -- For vsnip users.
-                { name = 'luasnip' }, -- For luasnip users.
+                { name = 'vsnip' }, -- For vsnip users.
+                -- { name = 'luasnip' }, -- For luasnip users.
                 -- { name = 'ultisnips' }, -- For ultisnips users.
                 -- { name = 'snippy' }, -- For snippy users.
             }, {
@@ -65,7 +68,6 @@ return {
                 { name = 'cmdline' }
             })
         })
-
 
         -- Set up lspconfig.
         for _, lsp_init_func in ipairs(lsp_init)
