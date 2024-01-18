@@ -9,6 +9,7 @@ local tokyonight = require("plugins.tokyonight")
 local treesitter = require("plugins.treesitter")
 local trouble = require("plugins.trouble")
 local web_devicon = require("plugins.web-devicons")
+local dashboard_nvim = require('plugins.dashboard-nvim')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -40,5 +41,6 @@ require("lazy").setup({
     barbecue,
     lualine,
     nvim_tree,
-    bufferline
+    bufferline,
+    dashboard_nvim
 })

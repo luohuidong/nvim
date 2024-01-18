@@ -25,7 +25,5 @@ return {
                 enable = true,
             },
         })
-
-        vim.cmd([[NvimTreeOpen]])
     end,
 }
