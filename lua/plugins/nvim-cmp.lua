@@ -66,56 +66,11 @@ return {
             })
         })
 
+
+        -- Set up lspconfig.
         for _, lsp_init_func in ipairs(lsp_init)
         do
             lsp_init_func()
         end
-
-        -- Set up lspconfig.
-        local capabilities = require('cmp_nvim_lsp').default_capabilities()
-        -- Replace <YOUR_LSP_SERVER> with each lsp server you've enabled.
-        lspconfig.volar.setup {
-            capabilities = capabilities,
-            filetypes = { 'typescript', 'javascript', 'javascriptreact', 'typescriptreact', 'vue', 'json' }
-        }
-        lspconfig.html.setup {
-            capabilities = capabilities
-        }
-        lspconfig.cssls.setup {
-            capabilities = capabilities
-        }
-        lspconfig.tailwindcss.setup {
-            capabilities = capabilities
-        }
-        lspconfig.tsserver.setup {
-            capabilities = capabilities
-        }
-        lspconfig.graphql.setup {
-            capabilities = capabilities
-        }
-        lspconfig.astro.setup {
-            capabilities = capabilities
-        }
-        lspconfig.prismals.setup {
-            capabilities = capabilities
-        }
-        lspconfig.svelte.setup {
-            capabilities = capabilities
-        }
-        lspconfig.eslint.setup {
-            capabilities = capabilities
-        }
-        lspconfig.jsonls.setup {
-            capabilities = capabilities
-        }
-        lspconfig.dockerls.setup {
-            capabilities = capabilities
-        }
-        lspconfig.gopls.setup {
-            capabilities = capabilities
-        }
-        lspconfig.marksman.setup {
-            capabilities = capabilities
-        }
     end
 }

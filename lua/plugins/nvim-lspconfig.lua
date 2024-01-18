@@ -5,20 +5,12 @@ return {
         require("mason").setup()
         require("mason-lspconfig").setup {
             ensure_installed = {
-                "html",
-                "cssls",
-                "tailwindcss",
-                "tsserver",
-                "graphql",
-                "volar",
-                "astro",
-                "prismals",
-                "svelte",
+                "html", "cssls", "tsserver",
+                "tailwindcss", "astro", "volar", "svelte",
                 "eslint",
+                "graphql", "prismals",
                 "jsonls",
-
-                "docker_compose_language_service",
-                "dockerls",
+                "docker_compose_language_service", "dockerls",
                 "lua_ls",
                 "marksman",
             }
