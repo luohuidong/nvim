@@ -1,20 +1,3 @@
-local barbecue = require('plugins.barbecue')
-local bufferline = require('plugins.bufferline')
-local lualine = require('plugins.lualine')
-local nvim_cmp = require("plugins.nvim-cmp")
-local nvim_lspconfig = require("plugins.nvim-lspconfig")
-local nvim_tree = require('plugins.nvim-tree')
-local telescope = require("plugins.telescope")
-local tokyonight = require("plugins.tokyonight")
-local treesitter = require("plugins.treesitter")
-local trouble = require("plugins.trouble")
-local web_devicon = require("plugins.web-devicons")
-local dashboard_nvim = require('plugins.dashboard-nvim')
-local formatter = require('plugins.formatter')
-local aerial = require('plugins.aerial')
-local nvim_autopairs = require('plugins.nvim-autopairs')
-local lualine_lsp_progress = require('plugins.lualine-lsp-progress')
-
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
     vim.fn.system({
@@ -33,20 +16,21 @@ vim.g.mapleader = " " -- Make sure to set `mapleader` before lazy so your mappin
 
 require("lazy").setup({
     -- the colorscheme should be available when starting Neovim
-    tokyonight,
-    web_devicon,
-    treesitter,
-    telescope,
-    nvim_lspconfig,
-    nvim_cmp,
-    trouble,
-    barbecue,
-    lualine,
-    nvim_tree,
-    bufferline,
-    dashboard_nvim,
-    formatter,
-    aerial,
-    nvim_autopairs,
-    lualine_lsp_progress
+    require('plugins.tokyonight'),
+    require('plugins.web-devicons'),
+    require('plugins.treesitter'),
+    require('plugins.telescope'),
+    require('plugins.nvim-lspconfig'),
+    require('plugins.nvim-cmp'),
+    require('plugins.trouble'),
+    require('plugins.barbecue'),
+    require('plugins.lualine'),
+    require('plugins.nvim-tree'),
+    require('plugins.bufferline'),
+    require('plugins.dashboard-nvim'),
+    require('plugins.formatter'),
+    require('plugins.aerial'),
+    require('plugins.nvim-autopairs'),
+    require('plugins.lualine-lsp-progress'),
+    require('plugins.gitsigns')
 })
