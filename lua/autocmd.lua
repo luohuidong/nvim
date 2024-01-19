@@ -1,32 +1,21 @@
-local myAutoGroup = vim.api.nvim_create_augroup("myAutoGroup", {
-    clear = true,
-})
+-- https://neovim.io/doc/user/lua-guide.html#lua-guide-autocommands
 
 local autocmd = vim.api.nvim_create_autocmd
 
 autocmd("TermOpen", {
-    group = myAutoGroup,
     command = "startinsert",
 })
 
 autocmd({ "InsertLeave", "TextChanged" }, {
-    group = myAutoGroup,
-    pattern = { "*" },
-    command = "silent! wall",
+    command = "Format",
 })
 
-autocmd("BufWritePre", {
-    group = myAutoGroup,
-    pattern = {
-        "*.html", "*.css", "*.js", "*.jsx", "*.ts", "*.tsx", "*.vue", "*.json",
-        "*.md", "*.lua",
-    },
-    command = "Format",
+autocmd({ "FocusLost" }, {
+    command = "w",
 })
 
 autocmd("BufEnter", {
     pattern = { "*.md" },
-    group = myAutoGroup,
     callback = function()
         vim.wo.colorcolumn = ""
         vim.o.wrap = true
