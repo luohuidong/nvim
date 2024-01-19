@@ -1,3 +1,3 @@
-require('lua.keybindings.basic')
-require('lua.keybindings.basic')
+require('basic')
+require('lua.keybindings.basic-kb')
 require('plugins')
