@@ -1,4 +1,4 @@
 require('basic')
-require('lua.keybindings.basic-kb')
+require('keybindings.basic-kb')
 require('plugins')
 require('autocmd')
