@@ -35,5 +35,6 @@ require("lazy").setup({
     require('plugins.gitsigns'),
     require('plugins.indent-blankline'),
     require('plugins.nvim-colorizer'),
-    require('plugins.which-key')
+    require('plugins.which-key'),
+    require('plugins.comment')
 })
