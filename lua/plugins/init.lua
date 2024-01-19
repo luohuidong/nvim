@@ -33,5 +33,6 @@ require("lazy").setup({
     require('plugins.nvim-autopairs'),
     require('plugins.lualine-lsp-progress'),
     require('plugins.gitsigns'),
-    require('plugins.indent-blankline')
+    require('plugins.indent-blankline'),
+    require('plugins.nvim-colorizer')
 })
