@@ -13,6 +13,7 @@ local dashboard_nvim = require('plugins.dashboard-nvim')
 local formatter = require('plugins.formatter')
 local aerial = require('plugins.aerial')
 local nvim_autopairs = require('plugins.nvim-autopairs')
+local lualine_lsp_progress = require('plugins.lualine-lsp-progress')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -47,4 +48,5 @@ require("lazy").setup({
     formatter,
     aerial,
     nvim_autopairs,
+    lualine_lsp_progress
 })
