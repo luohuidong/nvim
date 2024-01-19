@@ -12,6 +12,7 @@ local web_devicon = require("plugins.web-devicons")
 local dashboard_nvim = require('plugins.dashboard-nvim')
 local formatter = require('plugins.formatter')
 local aerial = require('plugins.aerial')
+local nvim_autopairs = require('plugins.nvim-autopairs')
 
 local lazypath = vim.fn.stdpath("data") .. "/lazy/lazy.nvim"
 if not vim.loop.fs_stat(lazypath) then
@@ -44,5 +45,6 @@ require("lazy").setup({
     bufferline,
     dashboard_nvim,
     formatter,
-    aerial
+    aerial,
+    nvim_autopairs,
 })
