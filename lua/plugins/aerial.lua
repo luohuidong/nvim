@@ -1,3 +1,5 @@
+-- https://github.com/stevearc/aerial.nvim
+
 local aerial_keybindings = require('keybindings.aerial-kb')
 
 return {

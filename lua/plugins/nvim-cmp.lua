@@ -1,3 +1,5 @@
+-- https://github.com/hrsh7th/nvim-cmp
+
 local lsp_init = require('lsp')
 
 return {

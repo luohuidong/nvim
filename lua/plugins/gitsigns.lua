@@ -1,3 +1,5 @@
+-- https://github.com/lewis6991/gitsigns.nvim
+
 local gitsigns_keybindings = require('keybindings.gitsigns-kb')
 
 return {

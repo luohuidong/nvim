@@ -1,3 +1,4 @@
+-- https://github.com/arkav/lualine-lsp-progress
 return {
     'arkav/lualine-lsp-progress',
     dependencies = { 'nvim-lualine/lualine.nvim' },
