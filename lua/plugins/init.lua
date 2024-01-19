@@ -32,5 +32,6 @@ require("lazy").setup({
     require('plugins.aerial'),
     require('plugins.nvim-autopairs'),
     require('plugins.lualine-lsp-progress'),
-    require('plugins.gitsigns')
+    require('plugins.gitsigns'),
+    require('plugins.indent-blankline')
 })
