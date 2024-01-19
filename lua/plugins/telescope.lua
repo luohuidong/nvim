@@ -1,6 +1,6 @@
 -- https://github.com/nvim-telescope/telescope.nvim
 
-local telescope_keybindings = require('keybindings.telescope')
+local telescope_keybindings = require('keybindings.telescope-kb')
 
 return {
     'nvim-telescope/telescope.nvim',

@@ -1,6 +1,6 @@
 -- https://github.com/neovim/nvim-lspconfig
 
-local nvm_lspconfig_keybinding = require('lua.keybindings.nvim-lspconfig')
+local nvm_lspconfig_keybinding = require('lua.keybindings.nvim-lspconfig-kb')
 
 return {
     "neovim/nvim-lspconfig",
