@@ -1,6 +1,6 @@
 local M = {}
 
-M.attach_buffer = function(bufrn)
+M.attach_buffer = function(bufnr)
     local gs = package.loaded.gitsigns
 
     local function map(mode, l, r, opts)
