@@ -7,6 +7,8 @@ A Neovim config for Frontend Development
 - [aerial](https://github.com/stevearc/aerial.nvim)
 - [barbecue](https://github.com/utilyre/barbecue.nvim)
 - [bufferline](https://github.com/akinsho/bufferline.nvim)
+- [comment](https://github.com/numToStr/Comment.nvim)
+- [copilot](https://github.com/github/copilot.vim)
 - [dashboard-nvim](https://github.com/nvimdev/dashboard-nvim)
 - [formatter](https://github.com/mhartington/formatter.nvim)
 - [gitsigns](https://github.com/lewis6991/gitsigns.nvim)
@@ -19,10 +21,9 @@ A Neovim config for Frontend Development
 - [nvim-lspconfig](https://github.com/neovim/nvim-lspconfig)
 - [nvim-tree](https://github.com/nvim-tree/nvim-tree.lua)
 - [telescope](https://github.com/nvim-telescope/telescope.nvim)
+- [toggleterm](https://github.com/akinsho/toggleterm.nvim)
 - [tokyonight](https://github.com/norcalli/nvim-colorizer.lua)
 - [treesitter](https://github.com/nvim-treesitter/nvim-treesitter)
 - [trouble](https://github.com/folke/trouble.nvim)
 - [web-devicons](https://github.com/nvim-tree/nvim-web-devicons)
 - [which-key](https://github.com/folke/which-key.nvim)
-
-## 
