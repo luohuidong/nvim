@@ -1,11 +1,9 @@
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 
-
 local map = vim.api.nvim_set_keymap
 -- 复用 opt 参数
 local opt = { noremap = true, silent = true }
-
 
 -- 取消 s 默认功能
 map("n", "s", "", opt)
@@ -34,8 +32,6 @@ map("n", "<C-Down>", ":resize +2<CR>", opt)
 map("n", "<C-Up>", ":resize -2<CR>", opt)
 -- 等比例
 map("n", "s=", "<C-w>=", opt)
-
-
 -- Terminal相关
 map("n", "<leader>t", ":sp | terminal<CR>", opt)
 map("n", "<leader>vt", ":vsp | terminal<CR>", opt)
