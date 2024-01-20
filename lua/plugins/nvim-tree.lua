@@ -25,5 +25,7 @@ return {
                 enable = true,
             },
         })
+
+        require("keybindings.nvim-tree-kb").basic()
     end,
 }
