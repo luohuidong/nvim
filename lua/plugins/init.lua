@@ -38,4 +38,5 @@ require("lazy").setup({
     require("plugins.which-key"),
     require("plugins.comment"),
     require("plugins.copilot"),
+    require("plugins.toggleterm"),
 })
