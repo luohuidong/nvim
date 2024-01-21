@@ -1,6 +1,8 @@
 -- https://github.com/neovim/nvim-lspconfig
 
-return function()
+local M = {}
+
+function M.basic()
     -- Global mappings.
     -- See `:help vim.diagnostic.*` for documentation on any of the below functions
     vim.keymap.set("n", "<space>e", vim.diagnostic.open_float)
@@ -39,3 +41,5 @@ return function()
         end,
     })
 end
+
+return M

@@ -14,6 +14,6 @@ return {
         local telescope = require('telescope')
         telescope.load_extension('project')
 
-        telescope_keybindings()
+        telescope_keybindings.basic()
     end
 }

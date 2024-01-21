@@ -20,6 +20,6 @@ return {
             }
         }
 
-        nvm_lspconfig_keybinding()
+        nvm_lspconfig_keybinding.basic()
     end
 }
