@@ -7,3 +7,10 @@ vim.cmd([[
         autocmd User FormatterPost w
     augroup END
 ]])
+
+vim.api.nvim_create_autocmd({ "BufRead" }, {
+    pattern = "*.md",
+    callback = function()
+        vim.opt_local.wrap = true
+    end,
+})
