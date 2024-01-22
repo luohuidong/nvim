@@ -39,4 +39,5 @@ require("lazy").setup({
     require("plugins.comment"),
     require("plugins.copilot"),
     require("plugins.toggleterm"),
+    require("plugins.leap"),
 })
