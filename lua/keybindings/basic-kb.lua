@@ -10,11 +10,10 @@ local function set_opt(opt)
     return opt
 end
 
-map("n", "s", "", set_opt())
-map("n", "sv", ":vsp<CR>", set_opt({ desc = "split window vertically" }))
-map("n", "sh", ":sp<CR>", set_opt({ desc = "split window horizontally" }))
-map("n", "sc", "<C-w>c", set_opt({ desc = "close current window" }))
-map("n", "so", "<C-w>o", set_opt({ desc = "close other windows" }))
+map("n", "<leader>sv", ":vsp<CR>", set_opt({ desc = "split window vertically" }))
+map("n", "<leader>sh", ":sp<CR>", set_opt({ desc = "split window horizontally" }))
+map("n", "<leader>sc", "<C-w>c", set_opt({ desc = "close current window" }))
+map("n", "<leader>so", "<C-w>o", set_opt({ desc = "close other windows" }))
 
 -- window navigation
 map("n", "<A-h>", "<C-w>h", set_opt({ desc = "jump to left window" }))
@@ -27,8 +26,6 @@ map("n", "<C-Left>", ":vertical resize -2<CR>", set_opt())
 map("n", "<C-Right>", ":vertical resize +2<CR>", set_opt())
 map("n", "<C-Down>", ":resize +2<CR>", set_opt())
 map("n", "<C-Up>", ":resize -2<CR>", set_opt())
--- 等比例
-map("n", "s=", "<C-w>=", set_opt())
 
 -- visual模式下缩进代码
 map("v", "<", "<gv", set_opt())
