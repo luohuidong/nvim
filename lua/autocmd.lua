@@ -3,7 +3,7 @@
 vim.cmd([[
     augroup FormatAutogroup
         autocmd!
-        autocmd FocusLost,BufLeave * Format
+        autocmd FocusLost,BufLeave,InsertLeave * Format
         autocmd User FormatterPost w
     augroup END
 ]])
