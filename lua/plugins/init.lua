@@ -18,9 +18,9 @@ require("lazy").setup({
     -- the colorscheme should be available when starting Neovim
     require("plugins.tokyonight"),
     require("plugins.web-devicons"),
+    require("plugins.nvim-lspconfig"),
     require("plugins.treesitter"),
     require("plugins.telescope"),
-    require("plugins.nvim-lspconfig"),
     require("plugins.nvim-cmp"),
     require("plugins.trouble"),
     require("plugins.barbecue"),

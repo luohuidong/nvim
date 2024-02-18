@@ -23,11 +23,11 @@ return {
 
                 "lua",
                 "dockerfile",
-                "markdown"
+                "markdown",
             },
-            async_install = true,
-            highlight = { enable = true },
             sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
         })
-    end
+    end,
 }
