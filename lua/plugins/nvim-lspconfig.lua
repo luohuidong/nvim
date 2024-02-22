@@ -38,6 +38,7 @@ return {
         })
 
         -- install formatters, linters, and other tools
+        -- https://github.com/williamboman/mason-lspconfig.nvim/issues/113
         local registry = require("mason-registry")
         local others = {
             -- fontend
