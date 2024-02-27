@@ -24,9 +24,15 @@ return {
                 "svelte",
                 "yaml",
 
+                -- language
                 "lua",
-                "dockerfile",
                 "markdown",
+                "go",
+                "python",
+                "rust",
+
+                -- others
+                "dockerfile",
             },
             sync_install = false,
             highlight = { enable = true },
