@@ -1,4 +1,5 @@
 local lua_ls = require("lsp.lua-ls")
+local rust_analyzer = require("lsp.rust_analyzer")
 
 local function init()
     -- Set up lspconfig.
@@ -32,4 +33,5 @@ end
 return {
     init,
     lua_ls,
+    rust_analyzer,
 }
