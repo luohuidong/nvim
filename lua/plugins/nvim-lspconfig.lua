@@ -29,11 +29,11 @@ return {
                 "dockerls",
 
                 -- language
-                "lua_ls",        -- lua
-                "gopls",         -- go
-                "marksman",      -- markdown
+                "lua_ls", -- lua
+                "gopls", -- go
+                "marksman", -- markdown
                 "rust_analyzer", -- rust
-                "pyright",       -- python
+                "pyright", -- python
             },
         })
 

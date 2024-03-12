@@ -1,14 +1,14 @@
 -- https://github.com/stevearc/aerial.nvim
 
-local aerial_keybindings = require('keybindings.aerial-kb')
+local aerial_keybindings = require("keybindings.aerial-kb")
 
 return {
-    'stevearc/aerial.nvim',
+    "stevearc/aerial.nvim",
     opts = {},
     -- Optional dependencies
     dependencies = {
         "nvim-treesitter/nvim-treesitter",
-        "nvim-tree/nvim-web-devicons"
+        "nvim-tree/nvim-web-devicons",
     },
     config = function()
         require("aerial").setup({
@@ -21,5 +21,5 @@ return {
 
         -- You probably also want to set a keymap to toggle aerial
         aerial_keybindings.basic()
-    end
+    end,
 }

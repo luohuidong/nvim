@@ -19,7 +19,7 @@ require("lazy").setup({
     require("plugins.tokyonight"),
     require("plugins.web-devicons"),
     require("plugins.nvim-lspconfig"),
-    require("plugins.treesitter"),
+    require("plugins.nvim-treesitter"),
     require("plugins.telescope"),
     require("plugins.nvim-cmp"),
     require("plugins.trouble"),

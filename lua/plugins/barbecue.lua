@@ -14,7 +14,7 @@ return {
 
         require("barbecue").setup({
             create_autocmd = false, -- prevent barbecue from updating itself automatically
-            theme = 'tokyonight'
+            theme = "tokyonight",
         })
 
         vim.api.nvim_create_autocmd({
@@ -31,5 +31,5 @@ return {
                 require("barbecue.ui").update()
             end,
         })
-    end
+    end,
 }
