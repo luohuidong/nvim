@@ -1,6 +1,5 @@
 local lua_ls = require("lsp.lua-ls")
 local rust_analyzer = require("lsp.rust_analyzer")
-local volar = require("lsp.volar")
 
 local function init()
     -- Set up lspconfig.
@@ -15,7 +14,6 @@ local function init()
         "tailwindcss",
         "astro",
         "svelte",
-        "volar",
         "eslint",
         "jsonls",
         "prismals",
@@ -35,5 +33,4 @@ return {
     init,
     lua_ls,
     rust_analyzer,
-    volar,
 }
