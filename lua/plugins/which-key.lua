@@ -8,6 +8,9 @@ return {
     end,
     config = function()
         local wk = require("which-key")
-        wk.register()
+        wk.register({
+            ["<leader>f"] = { name = "+file/find" },
+            ["<leader>g"] = { name = "+git", h = "+hunks" },
+        })
     end,
 }
