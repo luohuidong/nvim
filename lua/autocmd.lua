@@ -5,8 +5,8 @@ local autocmd = vim.api.nvim_create_autocmd
 vim.cmd([[
     augroup FormatAutogroup
         autocmd!
-        autocmd InsertLeave * Format
-        autocmd User FormatterPost w
+        autocmd InsertLeave * ++nested w
+        autocmd BufWritePost * FormatWrite
     augroup END
 ]])
 
