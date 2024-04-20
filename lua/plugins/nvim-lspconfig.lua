@@ -54,6 +54,9 @@ return {
 
             -- sql
             "sqlfluff",
+
+            -- rust
+            "taplo",
         }
         for _, pkg_name in ipairs(others) do
             local ok, pkg = pcall(registry.get_package, pkg_name)

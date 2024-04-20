@@ -43,6 +43,9 @@ return {
                 rust = {
                     require("formatter.filetypes.rust").rustfmt,
                 },
+                toml = {
+                    require("formatter.filetypes.toml").taplo,
+                },
                 -- Use the special "*" filetype for defining formatter configurations on
                 -- any filetype
                 ["*"] = {
